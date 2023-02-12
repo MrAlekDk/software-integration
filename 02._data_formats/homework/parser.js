@@ -3,13 +3,13 @@
 // Import the built-in `fs` module for reading files
 import fs from 'fs';
 
-// Import the `xml2js` package for parsing XML files
+// Import the `fast-xml-parser` package for parsing XML files
 import { XMLParser } from 'fast-xml-parser';
 
 // Import the `yamljs` package for parsing YAML files
 import yaml from 'yamljs';
 
-// Import the `csv-parser` package for parsing CSV files
+// Import the `csvtojson` package for parsing CSV files
 import csv from 'csvtojson';
 
 // Reading text files
