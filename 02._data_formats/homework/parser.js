@@ -46,5 +46,3 @@ const xmlData = parseXmlFile('me.xml');
 const csvData = await parseCsvFile('me.csv');
 const txtData = readTextFile('me.txt');
 const yamlData = parseYamlFile('me.yaml');
-
-console.log(csvData);
