@@ -41,8 +41,4 @@ function parseCsvFile(filePath) {
     return csv().fromFile(filePath);
   };
 
-const jsonData = parseJsonFile('me.json');
-const xmlData = parseXmlFile('me.xml');
-const csvData = await parseCsvFile('me.csv');
-const txtData = readTextFile('me.txt');
-const yamlData = parseYamlFile('me.yaml');
+export {readTextFile, parseXmlFile, parseYamlFile, parseJsonFile, parseCsvFile}
