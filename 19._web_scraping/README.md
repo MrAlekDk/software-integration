@@ -1,5 +1,5 @@
 This is a webscraper made for my System integration course. It scrapes the
-website danish website "jobindex" for job postings and saves them in a list to be printed.
+danish website "jobindex" for job postings with the search query "Software development" and saves them in a list to be printed.
 
 
 
