@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "19-web-scraping"
+version = "0.1.0"
+description = ""
+authors = ["Alexander <alex030tstud.kea.dk>"]
+readme = "README.md"
+packages = [{include = "19"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+beautifulsoup4 = "^4.12.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
