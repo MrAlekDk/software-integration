@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CORS Example</title>
+  <script>
+    // Make a CORS request to the backend server
+    fetch('http://localhost:8000/greeting')
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.log(error));
+  </script>
+</head>
+<body>
+  <h1>CORS Example</h1>
+  <p>Check the browser console for the response.</p>
+</body>
+</html>
