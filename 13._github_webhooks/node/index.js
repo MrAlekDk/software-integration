@@ -6,7 +6,7 @@ app.use(express.urlencoded({extended: true}));
 
 //remember to use ngrok and update the URL for the webhook on github.com
 app.post("/githubWebhook", (req, res)=>{
-    console.log(req.body.payload.action);
+    console.log(req.body);
     res.send({});
 })
 
