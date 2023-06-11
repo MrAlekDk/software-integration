@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend for SSE</title>
+</head>
+<body>
+    <h1>This is a page that will regularly recieve data from a backend and display it</h1>
+    <h2>Current status:</h2>
+    <p id="status"></p>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Send Time</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <script>
+        const eventSource = new EventSource('/get-data');
+        const table = document.getElementById("tbody");
+        const status = document.getElementById("status");
+
+        eventSource.addEventListener('message', (event)=>{
+            const newRow = document.createElement("tr");
+            const cell1 = document.createElement("td");
+            cell1.textContent = event.data
+            newRow.appendChild(cell1);
+
+            table.appendChild(newRow);
+        });
+
+        eventSource.addEventListener("open", (event)=>{
+            status.textContent = "Connection was opened!"
+        })
+
+        eventSource.addEventListener("error", (event)=>{
+            if (eventSource.readyState === EventSource.CLOSED){
+                status.textContent = "Connection was closed"
+            } else if (eventSource.readyState === EventSource.CONNECTING){
+                status.textContent = "Connection is trying to re-connect"
+            }
+        })
+
+    </script>
+    
+</body>
+</html>
