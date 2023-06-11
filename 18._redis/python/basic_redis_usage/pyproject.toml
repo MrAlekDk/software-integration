@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "basic-redis-usage"
+version = "0.1.0"
+description = ""
+authors = ["Alexander <alex030tstud.kea.dk>"]
+readme = "README.md"
+packages = [{include = "basic_redis_usage"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+redis = "^4.5.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
