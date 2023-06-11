@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webscoket Page</title>
+</head>
+<body>
+    <h1>Write something via the socket below</h1>
+    <br>
+    <input type="text" id="input">
+    <button onClick="sendMessage()">Send</button>
+    <table id="table">
+        <tbody>
+
+        </tbody>
+    </table>
+    
+    <script>
+        const table = document.getElementById("table");
+        const ws = new WebSocket("ws://localhost:8080");
+
+        ws.onopen = () =>{
+            console.log("Connected to the server");
+        };
+
+        ws.onmessage = (event)=>{
+            const message = event.data
+            const row = document.createElement("tr")
+            row.innerText = message
+            table.appendChild(row);
+        }
+
+        function sendMessage(){
+            const input = document.getElementById("input");
+            const message =input.value
+            ws.send(message);
+            input.value = ""
+        }
+    </script>
+</body>
+</html>
