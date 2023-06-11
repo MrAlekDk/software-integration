@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>Basic and multiparat forms</h2>
+
+    <h3>Basic Form</h3>
+    <form action="http://127.0.0.1:8000/bForm" method="POST">
+        <input name="name" placeholder="Alexander">
+        <input name="age" placeholder="25" type="number">
+
+        <button>Submit</button>
+    </form>
+
+    <h3>Multipart Form</h3>
+    <form action="http:/127.0.0.1:8000/fileForm" method="POST" enctype="multipart/form-data">
+        <input name="name" placeholder="Alexander">
+        <input name="file" type="file" accept="application/pdf">
+        
+        <button>Submit</button>
+    </form>
+    
+</body>
+</html>
