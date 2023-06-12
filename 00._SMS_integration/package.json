@@ -1,0 +1,19 @@
+{
+  "name": "00._sms_integration",
+  "version": "1.0.0",
+  "description": "This integration was created as an assignment for my course System-integration.\r I decided to use Twilio, which is an American service provider, that offers lots of different \r integration services, such as E-email and SMS.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "path": "^0.12.7",
+    "twilio": "^4.11.2"
+  }
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS integration</title>
+</head>
+<body>
+    <h1>Send SMS to friends</h1>
+
+    <form action="http://localhost:3000/send-sms" method="POST">
+        <label for="message">Enter SMS message</label>
+        <input name="message" id="message" placeholder="Hello World!">
+        <label for="phoneNr">Enter a valid phone number</label>
+        <input name="phoneNr" id="phoneNr" placeholder="+4520392029">
+
+        <button>Submit</button>
+    </form>
+</body>
+</html>
